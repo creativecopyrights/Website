@@ -1,0 +1,19 @@
+.actionFormContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actionFormContainer__nav{
+    width: 80%;
+    position: relative;
+    top: 5px;
+}
+
+.actionFormContainer__form{
+    width: 80%;
+    height: 500px;
+    background-color: white;
+    display: flex;
+    margin: 0px auto 0px auto;
+}

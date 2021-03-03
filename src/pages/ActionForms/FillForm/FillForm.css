@@ -1,0 +1,54 @@
+.fillFormContainer{
+
+}
+
+
+.dropzone{
+    padding: 25px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropzone div{
+    text-align: center;
+    font-size: 12px;
+}
+
+.dropzone:hover{
+    background-color: rgb(202, 202, 202);
+}
+
+.fillFormContainer_form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.fillFormContainer_form--input{
+    height: 32px;
+    margin: 5px 5px;
+    background-color: rgb(255, 235, 232);
+    border-width: 1px;
+    border-color: rgb(255, 209, 202);
+    border-style: solid;
+    padding: 0px 25px 0px 25px;
+}
+
+.fillFormContainer_form textarea{
+    resize: none;
+    margin: 25px 5px;
+    border-style: none;
+}
+
+.fillFormContainer_form--button{
+    height: 24px;
+    letter-spacing: 1.5px;
+    background-color: #4D87B5;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 5px;
+    color:white;
+}

@@ -1,0 +1,52 @@
+.bodyFormContainer{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.bodyFormContainer__form{
+
+    width: 30%;
+}
+
+.bodyFormContainer__body{
+ 
+   
+    width: 70%;
+}
+
+
+.welcomeTextContainer{
+    letter-spacing: 1.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 80%;
+}
+
+.welcomeTextContainer div{
+    letter-spacing: 3px;
+    font-size: 55px;
+}
+
+.welcomeTextContainer__buttonGroup{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 15px;
+    left: 10%;
+    width: 80%;
+}
+
+.welcomeTextContainer__buttonGroup button{
+    font-size: 16px;
+    padding: 8px 20px;
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+    color: white;
+    border-width: 1px;
+}

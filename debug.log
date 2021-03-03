@@ -1,0 +1,4 @@
+[0228/205934.327:ERROR:registration_protocol_win.cc(130)] TransactNamedPipe: Die Pipe wurde beendet. (0x6D)
+[0228/205934.330:ERROR:file_io_win.cc(180)] CreateFile C:\Users\Eduard Albrecht\AppData\Local\BraveSoftware\Brave-Browser\User Data\Crashpad\settings.dat: Zugriff verweigert (0x5)
+[0228/210001.205:ERROR:registration_protocol_win.cc(130)] TransactNamedPipe: Die Pipe wurde beendet. (0x6D)
+[0228/210001.209:ERROR:file_io_win.cc(180)] CreateFile C:\Users\Eduard Albrecht\AppData\Local\BraveSoftware\Brave-Browser\User Data\Crashpad\settings.dat: Zugriff verweigert (0x5)

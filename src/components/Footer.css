@@ -1,0 +1,21 @@
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    min-height: 7vh;
+}
+
+
+.footer__container ul{
+    display: flex;
+    list-style: none;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: white;
+    font-size: x-small;
+    font-weight: 400;
+    margin: 0px 25px 0px 25px;
+}
