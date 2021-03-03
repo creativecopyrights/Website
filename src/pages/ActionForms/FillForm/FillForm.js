@@ -44,7 +44,6 @@ const FillForm = () => {
                 <input onClick={handleOnClick} className="fillFormContainer_form--button" type="submit" value="proceed to checkout"/>
             </form>
             
-    
         </div>
     )
 }
