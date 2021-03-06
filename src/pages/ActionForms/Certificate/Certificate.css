@@ -1,0 +1,40 @@
+.certificateContainer{
+    text-align: center;
+}
+
+.certificate--cert{
+    text-align: center;
+}
+
+.certificateContainer p{
+    font-size: 15px;
+}
+
+.certificate__buttonContainer{
+
+   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.certificate--a{
+
+
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    width: 60%;
+
+}
+
+.certificate--input{
+    color: white;
+    padding: 6px;
+    letter-spacing: 1.4px;
+    background-color: #4D87B5;
+    border-color: transparent;
+    border-radius: 6px;
+    width: 100%;
+}

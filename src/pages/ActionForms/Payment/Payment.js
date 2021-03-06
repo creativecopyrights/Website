@@ -22,7 +22,7 @@ const Payment = () => {
 
 
        
-        setAmount( e.target.value)
+        setAmount(e.target.value)
     }
 
     const initialOptions = {

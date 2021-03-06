@@ -8,16 +8,17 @@ import LinkGroup from "../../components/LinkGroup/LinkGroup"
 import "./BodyForm.css"
 
 
-const BodyForm = ({props,children}) => {
+const BodyForm = ({props,childrenLeft,childrenRight}) => {
     return(
         <div className="bodyFormContainer" >
 
         <div className="bodyFormContainer__form" >
-            {children}
+            {childrenLeft}
         </div>    
 
         <div className="bodyFormContainer__body" >
-            <WelcomeText />
+            {childrenRight }
+           
         </div>
             
         </div>
@@ -26,28 +27,7 @@ const BodyForm = ({props,children}) => {
 
 export default BodyForm
 
-const WelcomeText = () => {
-    return(
-        <div className="welcomeTextContainer" >
-            <div>YOUR IDEAS ARE YOUR POWER.</div>
-            <div>PROTECT THEM.</div>
-            <br/>
-            <p>We provide a timestamp for your file and save it safely on a blockchain</p>
-            <p> Lorem ipsum is a placeholder text used to fill unfilled spaces until proper text is found.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                Phasellus id semper enim. 
-                Morbi nec felis vitae enim molestie sagittis id eu sem. 
-                Nulla nibh quam, commodo ac arcu a, dictum rutrum nunc. 
-                Etiam eget libero semper, feugiat sem quis, interdum libero. 
-                By the way if you were wondering that piece of text doesn't mean anything.
-            </p>
-            <div className="welcomeTextContainer__buttonGroup" >
-                <button>HOW IT WORKS</button>
-                <button>GET STARTED</button>
-            </div>
-        </div>
-    )
-}
+
 
 /*
 <div className="innerContainer" >

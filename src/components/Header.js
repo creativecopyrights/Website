@@ -5,6 +5,7 @@ import {Link} from "react-router-dom"
 const Header = () => {
     return(
         <div className="navBar" >
+            <Link to="/" style={{width:"130px",position:"relative",left:"50px",top:"30px",height:"180px"}} ></Link>
             <div className="navBar__container" >
                 <ul>
                     <li>

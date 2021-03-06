@@ -5,6 +5,7 @@ import './App.css';
 
 // Pages
 import BodyForm from "./pages/BodyForm/BodyForm"
+import Impressum from "./pages/FooterLinks/Impressum"
 
 
 // Components
@@ -21,6 +22,7 @@ import Payment from "./pages/ActionForms/Payment/Payment"
 import Certificate from "./pages/ActionForms/Certificate/Certificate"
 
 
+
 function App() {
   return (
 
@@ -32,13 +34,17 @@ function App() {
 
         <Switch>
           <Route path="/"  exact >
-            <BodyForm children={<ActionForm children={<FillForm />} />} />
+            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />} childrenRight={<WelcomeText />} />
           </Route>
           <Route path="/payment"  exact >
-            <BodyForm children={<ActionForm children={<Payment />} />} />
+            <BodyForm childrenLeft={<ActionForm children={<Payment />} />} childrenRight={<WelcomeText />}/>
           </Route>
           <Route path="/certificate"  exact >
-            <BodyForm children={<ActionForm children={<Certificate />} />} />
+            <BodyForm childrenLeft={<ActionForm children={<Certificate />} />} childrenRight={<WelcomeText />}/>
+          </Route>
+          <Route path="/impressum" exact>
+          <BodyForm  childrenRight={<Impressum />} />
+  
           </Route>
           <Redirect to="/" />
         </Switch>
@@ -51,3 +57,27 @@ function App() {
 }
 
 export default App;
+
+
+const WelcomeText = () => {
+  return(
+      <div className="welcomeTextContainer" >
+          <div>YOUR IDEAS ARE YOUR POWER.</div>
+          <div>PROTECT THEM.</div>
+          <br/>
+          <p>We provide a timestamp for your file and save it safely on a blockchain</p>
+          <p> Lorem ipsum is a placeholder text used to fill unfilled spaces until proper text is found.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              Phasellus id semper enim. 
+              Morbi nec felis vitae enim molestie sagittis id eu sem. 
+              Nulla nibh quam, commodo ac arcu a, dictum rutrum nunc. 
+              Etiam eget libero semper, feugiat sem quis, interdum libero. 
+              By the way if you were wondering that piece of text doesn't mean anything.
+          </p>
+          <div className="welcomeTextContainer__buttonGroup" >
+              <button>HOW IT WORKS</button>
+              <button>GET STARTED</button>
+          </div>
+      </div>
+  )
+}

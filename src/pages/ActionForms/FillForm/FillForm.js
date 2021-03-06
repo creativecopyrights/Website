@@ -21,10 +21,10 @@ import { Link } from "react-router-dom";
 
 const FillForm = () => {
 
-    const {acceptedFiles, getRootProps, getInputProps} = useDropzone({maxFiles:1});
+    const {acceptedFiles, getRootProps, getInputProps} = useDropzone({maxFiles:1, accept:"image/jpeg, image/png, .obj, .fbx,.pdf"});
 
     const files = acceptedFiles.map(file => (
-        <div>
+        <div style={{fontSize:"1rem"}} >
             {file.path} - {(file.size / 1000000).toFixed(2)} MB
         </div>
     ))
@@ -41,7 +41,7 @@ const FillForm = () => {
                                         <div  >DRAG AND DROP ANY DIGITAL FILE FORMAT HERE</div>
                                     </div>
                                     :
-                                    <div>{files}</div>
+                                    <div  >{files}</div>
                     }
 
 
