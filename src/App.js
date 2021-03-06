@@ -1,6 +1,8 @@
 import {BrowserRouter as Router, Switch, Route,Redirect} from "react-router-dom"
 import './App.css';
 
+
+
 // Pages
 import BodyForm from "./pages/BodyForm/BodyForm"
 
@@ -21,6 +23,7 @@ import Certificate from "./pages/ActionForms/Certificate/Certificate"
 
 function App() {
   return (
+
     <div className="App">
       <Router>
         {/* Header */}
@@ -43,6 +46,7 @@ function App() {
         <Footer />
       </Router>
     </div>
+ 
   );
 }
 

@@ -1,0 +1,55 @@
+.paymentContainer{
+    height: 90%;
+}
+
+.payment__amount{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.payment__amount--input{
+    height: 32px;
+    width: 80%;
+    margin: 5px 5px;
+    background-color: rgb(255, 235, 232);
+    border-width: 1px;
+    border-color: rgb(255, 209, 202);
+    border-style: solid;
+    padding: 0px 25px 0px 25px;
+    margin: 16px 0px;
+}
+
+
+.paypalContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 250px;
+    width: 400px;
+}
+
+.amountInput{
+    position: relative;
+    width: 30%;
+    font-size: 28px;
+    text-align: center;
+    font-weight: bold;
+    border-color: transparent;
+    
+}
+
+.amountInput:focus{
+    border-color: transparent;
+}
+
+.amountInput::-webkit-outer-spin-button,
+.amountInput::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.amountInput[type=number] {
+    -moz-appearance: textfield;
+  }
