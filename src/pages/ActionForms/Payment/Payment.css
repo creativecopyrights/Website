@@ -41,8 +41,9 @@
 }
 
 .amountInput:focus{
-    border-color: transparent;
+    outline: none !important;
 }
+
 
 .amountInput::-webkit-outer-spin-button,
 .amountInput::-webkit-inner-spin-button{

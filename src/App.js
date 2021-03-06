@@ -5,7 +5,17 @@ import './App.css';
 
 // Pages
 import BodyForm from "./pages/BodyForm/BodyForm"
+
+// Footer
 import Impressum from "./pages/FooterLinks/Impressum"
+import TermsAndConditions from "./pages/FooterLinks/TermsAndConditions"
+import DataProtection from "./pages/FooterLinks/DataProtection"
+
+// Header
+import Pricing from "./pages/HeaderLinks/Pricing"
+import UseCases from "./pages/HeaderLinks/UseCases"
+import HowItWorks from "./pages/HeaderLinks/HowItWorks"
+import VerifyAFiling from "./pages/HeaderLinks/VerifyAFiling"
 
 
 // Components
@@ -43,8 +53,25 @@ function App() {
             <BodyForm childrenLeft={<ActionForm children={<Certificate />} />} childrenRight={<WelcomeText />}/>
           </Route>
           <Route path="/impressum" exact>
-          <BodyForm  childrenRight={<Impressum />} />
-  
+            <BodyForm  childrenRight={<Impressum />} />
+          </Route>
+          <Route path="/termsandconditions" exact>
+            <BodyForm  childrenRight={<TermsAndConditions />} />
+          </Route>
+          <Route path="/dataprotection" exact>
+            <BodyForm  childrenRight={<DataProtection />} />
+          </Route>
+          <Route path="/pricing" exact>
+            <BodyForm  childrenRight={<Pricing />} />
+          </Route>
+          <Route path="/usecases" exact>
+            <BodyForm  childrenRight={<UseCases />} />
+          </Route>
+          <Route path="/how" exact>
+            <BodyForm  childrenRight={<HowItWorks />} />
+          </Route>
+          <Route path="/verify" exact>
+            <BodyForm  childrenRight={<VerifyAFiling />} />
           </Route>
           <Redirect to="/" />
         </Switch>

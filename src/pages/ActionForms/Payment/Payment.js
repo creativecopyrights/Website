@@ -19,9 +19,6 @@ const Payment = () => {
     const [amount,setAmount] = useState(15.00)
 
     const onAmountChange = (e) => {
-
-
-       
         setAmount(e.target.value)
     }
 
