@@ -55,15 +55,15 @@ const FillForm = () => {
                 {acceptedFiles.length !== 0 ?
 
                                 <div className="fillFormContainer_form--button" >
-                                    <Link style={{width:"100%",height:"100%",textAlign:"center"}} to="/payment" className="link">proceed to checkout</Link>
+                                    <Link style={{fontFamily:"Architects Daughter,cursive" ,width:"100%",height:"100%",textAlign:"center"}} to="/payment" className="link">proceed to checkout</Link>
                                 </div>
                                 :
                                 <div className="fillFormContainer_form--buttonGrey" >
-                                <div style={{width:"100%",height:"100%",textAlign:"center",color:"white",fontWeight:"100"}}>paste a file to proceed</div>
+                                <div style={{fontFamily:"Architects Daughter,cursive" , width:"100%",height:"100%",textAlign:"center",color:"white",fontWeight:"100"}}>paste a file to proceed</div>
                                 </div>
                 }
 
-                
+                           
             </form>
             
         </div>

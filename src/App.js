@@ -102,9 +102,10 @@ const WelcomeText = () => {
               By the way if you were wondering that piece of text doesn't mean anything.
           </p>
           <div className="welcomeTextContainer__buttonGroup" >
-              <button>HOW IT WORKS</button>
-              <button>GET STARTED</button>
+              <button style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} >HOW IT WORKS</button>
+              <button style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} >GET STARTED</button>
           </div>
       </div>
   )
 }
+
