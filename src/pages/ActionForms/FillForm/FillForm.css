@@ -3,20 +3,42 @@
 }
 
 
+
 .dropzone{
-    padding: 25px;
-    height: 120px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+  
     
 }
 
-.dropzone div{
+.dropzone input{
+    height: 130px;
+    width: 100%;
+
+}
+
+.filepicker{
+    
+    cursor: pointer;
+    opacity: 0;
+}
+
+.inputOverlay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    pointer-events: none
+}
+
+.inputOverlay div{
     text-align: center;
     font-size: 12px;
+
 }
 
 .dropzone:hover{
