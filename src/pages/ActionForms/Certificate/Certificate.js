@@ -1,7 +1,7 @@
 //PDF
 import pdfMake from "pdfmake/build/pdfmake"
 import pdfFonts from "pdfmake/build/vfs_fonts"
-
+ import s from "../../../images/BG.svg"
 import BackgroundImage from "../../../images/Background.png"
 
 // CSS
@@ -9,7 +9,8 @@ import "./Certificate.css"
 
 import Placeholder from "../../../images/formular.png"
 
-pdfMake.vfs = pdfFonts.pdfMake.vfs
+pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
 
 const Certificate = () => {
 
@@ -25,14 +26,18 @@ const Certificate = () => {
     console.log(date)
 
     var docType = {
+        watermark: { text: 'PDF created by Edlix Studios', color: 'white', opacity: 0.3, bold: true, italics: false },
         background:{
             image:"bg",
-            fit: [1500, 1500]
+            fit: [1600, 1600]
         },
 
         content:[
             { text:"CERTIFICATE" ,style:"header"},
-            { text:date, style:"header" },
+            { text:date, style:"header", margin: [0,75,0,75] },
+            { text:"Your official Certification. Your Hashcode is saved as QR Code", style:"body"
+            , margin: [0,25,0,50]  },
+          
         {
             qr: "21619a0e2009d34091acb7fa09637b905c630f49e4633aa36032b6580c8787d8",
             style:"qr"
@@ -46,13 +51,20 @@ const Certificate = () => {
             fontSize:32,
             bold:true
         },
+        body:{
+            alignment:"center",
+            color:"white",
+            fontSize:24,
+            bold:false
+        },
         qr:{
             alignment:"center"
         }
     },
     images: {
-        bg: "https://images.unsplash.com/photo-1579546929662-711aa81148cf?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhZGllbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80"
-      }
+        bg: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcKCAgIBwgGBwgHBwoHBwcGBg8ICQcKIBEWIiARExMYHSggGBoxGx8TITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDisZFRktLS0tKysrKysrKzcrKysrKy0rKysrKysrKzcrKys3KysrKysrKy0rNysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAZAAEBAQEBAQAAAAAAAAAAAAACAQADBQb/xAAWEAEBAQAAAAAAAAAAAAAAAAAAARH/xAAaAQEBAQEAAwAAAAAAAAAAAAACAQQAAwUG/8QAFREBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhEDEQA/APLVGfVR81VZmKIrMxQarMxCrIpRFZFKCqVlIQo06NQ450bHShUKBRsOwaJwKNOjUKBQrpQsQ4FGw6NE4FGnRqFAsCulGicChXSjUKOdGw7BonHOpTo1CgUcOjiHH1rIpvVqyKUGsqKURlRSgsqMURWZiFVRigtRsMaroFGnRonHOjXShUKBRpjUOBRp0aJRzo10sGocc7BsdKFiHAo06NEoFGnRqHHOjXSjROOdg10oVCgUTooUfVKjLHrqrMxRFZoxQVZmKDVZFKIrIpQWVFKDWaspCFGulCoUCjTo1DjnUp0UKOdGulCicCjTo1DgUadGiUc6NdKFQ4FGulCxCgUbDo2CcCjYdFDjnRdLBxCj6dkVIwKyRSRlRSg1lRigqqMUSqzMUFWZigqzMUFRpJVc50a6WDUKOdGx0oUTgUadGxCgUadGocc6NdKFE4FGnRqFAo06NE451KdGoUc6NdKFE4FE6liE+jVGFjVmYoiszLBVmY4KsilEqsikLKilBZUaENVUYoiWDTo1ywKNOjRKOdF0sCocCjTo0SgUadGocc6NdKNE450adGoUCjTo1DgUadGicc6h0UKPoWRXijKrIpRKyopQWVGKDVVGKIrMxQarMxQVZmKCrIpRFGqxIFGulCoUCjTo2IUcxsOxKNOOdGnRqHAo06NEoFCulGxDjnRp0ahQKNOjROBYJ0UOPeUVeCM6szEiszFBVmYhVkUoNVkUojKikLKjFBVUYkVUYoLUK6DVdHOjTqUTjnYNOjYhQKFdKNQ4FCulGicc6NOjUKBQrpYNE4FCulGoUc6hVEOPaVGZniVUUojKikNZUYoKqjFBqszFEVmYoNVmYhVkUoisilBqpWUhCwadGoUCwK6Uahxzo2HYKUoFGnRonAoWOlGxDjnRsOpRKOdg06NQ4FgnRsEo9hmZlgqyKURWjMUFWZigqyKQqyKUSsqKUFlRigqsRiiKzMQqzMUFqNNKro50adGocChXSjRKBQpjUOBRp0aJQKNOjUOBYFdKNQo51CqYJx6rIrHHMzMURVRSgsqMQqqNCgqzMURWZigqyKUSqyKQsqKUFlRSGsqKSDQrpRsRY50a6UKhwLBp0ahRzo10o0TjnRrpRqFHOjTo0TgUTooUekrMwmzMxQWVmKIrMxQVZmKCysxIysxQayoxQVWIxIrMxQVZmKDVZmKDVGsyuGjWZCgWDYzCcGjWZCg0azIcGhVYTgUWZCj/2Q=="
+       
+    }
     }
 
 

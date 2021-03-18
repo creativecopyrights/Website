@@ -18,13 +18,22 @@ const FillForm = () => {
     let hash = ""
 
     const [files,setFiles] = useState([])
+    const [name,setName] = useState("")
+    const [email,setEmail] =useState("")
 
 
     useEffect(()=>{
         console.log(hash)
     },[hash])
 
+    const ChangeName = (e) => {
 
+        setName(e.target.value)
+    } 
+
+    const ChangeEmail = (e) => {
+        setEmail(e.target.value)
+    } 
 
     function CreateHashFromFile(e) {
 
@@ -75,10 +84,10 @@ const FillForm = () => {
                
             </div>
 
-                <input className="fillFormContainer_form--input" type="text" name="name" id="name" placeholder="YOUR NAME *" />
-                <input  className="fillFormContainer_form--input"  type="email" name="email" id="email" placeholder="YOUR EMAIL ADRESS *" />
+                <input onChange={ChangeName} value={name} className="fillFormContainer_form--input" type="text" name="name" id="name" placeholder="YOUR NAME *" />
+                <input onChange={ChangeEmail} value={email}  className="fillFormContainer_form--input"  type="email" name="email" id="email" placeholder="YOUR EMAIL ADRESS *" />
                 <textarea className="fillFormContainer_form--textarea" name="textarea" id="" rows="6" placeholder="OPTIONAL NOTES                                   DESCRIBE YOUR WORK OR WRITE NOTES                      FOR YOUR MENVINIENCE THIS WILL BE SHOWN ON            THE FINAL CERTIFICATE" ></textarea>
-                {files.length !== 0 ?
+                {files.length !== 0 && name !== "" && email !== "" ?
 
                                 <div className="fillFormContainer_form--button" >
                                     <Link style={{fontFamily:"Architects Daughter,cursive" ,width:"100%",height:"100%",textAlign:"center"}} to="/payment" className="link">proceed to checkout</Link>

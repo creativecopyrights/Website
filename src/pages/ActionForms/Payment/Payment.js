@@ -16,11 +16,37 @@ const secret = "EOX4VjKj_DsLt-cbtByQsJUXFmBSBOImXFjG-Pb9ify1FOUvRPoQ6XA8uHrUbYo8
 
 const Payment = () => {
 
-    const [amount,setAmount] = useState(15.00)
+
 
     const onAmountChange = (e) => {
         setAmount(e.target.value)
     }
+
+    const [amount, setAmount] = useState(2);
+    const [orderID, setOrderID] = useState(false);
+
+    function onChange({ target: { value } }) {
+        setAmount(value);
+        setOrderID(false);
+    }
+
+    function createOrder(data, actions) {
+        return actions.order
+            .create({
+                purchase_units: [
+                    {
+                        amount: {
+                            value: amount,
+                        },
+                    },
+                ],
+            })
+            .then((orderID) => {
+                setOrderID(orderID);
+                return orderID;
+            });
+    }
+
 
     const initialOptions = {
         "client-id": "sb",
@@ -28,11 +54,13 @@ const Payment = () => {
         intent: "capture",
         "data-client-token": "",
         debug: true,
-        "disable-funding": ["credit","card"]
+        "disable-funding": ["card","giropay","sepa","sofort"],
+        "enable-funding":["credit"]
+    
     }
 
     return(
-        <PayPalScriptProvider  options={initialOptions} >
+        <PayPalScriptProvider options={initialOptions} >
         <div className="paymentContainer" >
             <form className="payment__amount" >
 
@@ -46,7 +74,7 @@ const Payment = () => {
                 <input  style={{position:"relative",top:"32px"}}  className="payment__amount--input"  type="text" name="promoCode" id="promoCode" placeholder="ENTER PROMO CODE" />
                 <div className="paypalContainer">
 
-                <PayPalButtons />
+                <PayPalButtons createOrder={createOrder}  forceReRender={amount} />
              
                 </div>
                 

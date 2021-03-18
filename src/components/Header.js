@@ -9,6 +9,9 @@ const Header = () => {
             <div className="navBar__container" >
                 <ul>
                     <li>
+                        <Link to="/" className="link">HOME</Link>
+                    </li>
+                    <li>
                         <Link to="/pricing" className="link">PRICING</Link>
                     </li>
                     <li>
