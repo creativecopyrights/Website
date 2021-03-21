@@ -1,11 +1,18 @@
 import "./Header.css"
-import {Link} from "react-router-dom"
+import {Link,useLocation} from "react-router-dom"
+
 
 
 const Header = () => {
+
+    const location = useLocation()
+
     return(
         <div className="navBar" >
+
             <Link to="/" style={{width:"130px",position:"relative",left:"50px",top:"30px",height:"180px"}} ></Link>
+            {location.pathname !== "/admin" && 
+            
             <div className="navBar__container" >
                 <ul>
                     <li>
@@ -24,7 +31,9 @@ const Header = () => {
                         <Link to="/verify" className="link">VERIFY A FILING</Link>
                     </li>
                 </ul>  
-            </div>
+            </div>}
+           
+            
         </div>
     )
 }

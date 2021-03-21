@@ -1,11 +1,19 @@
-import {Link} from "react-router-dom"
+import {Link,useLocation} from "react-router-dom"
+
 import "./Footer.css"
 
 
 const Footer = () => {
+
+    const location = useLocation()
+
+
     return(
         <div className="footer" >
-            <div className="footer__container" >
+
+{location.pathname !== "/admin" &&
+
+<div className="footer__container" >
                 <ul >
                     <li>
                         <Link className="footerLink" to="/impressum" >IMPRESSUM</Link>
@@ -18,6 +26,9 @@ const Footer = () => {
                     </li>
                 </ul>
             </div>
+}
+
+            
         </div>
     )
 }

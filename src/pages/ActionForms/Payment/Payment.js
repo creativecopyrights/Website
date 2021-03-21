@@ -2,6 +2,8 @@
 import {useState,useRef,useEffect} from "react"
 import {Link,Redirect,Route,useHistory } from "react-router-dom"
 
+import axios from "axios"
+
 // Paypal
 //import {PayPalScriptProvider,PayPalButtons, PayPalMessages } from "@paypal/react-paypal-js";
 
@@ -31,6 +33,15 @@ const Payment = () => {
     const [amount, setAmount] = useState(2);
     const [orderID, setOrderID] = useState(false);
 
+    useEffect(()=>{
+
+        axios.get("http://localhost:5000/payamount").
+        then(res => {
+            console.log(res.data.amount)
+            setAmount(res.data.amount)
+        })
+
+    },[amount])
 
 
     const buyCredentials = {

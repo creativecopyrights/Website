@@ -36,7 +36,7 @@ module.exports = {
    */
 
   networks: {
-    contracts_build_directory:"./src/components/imageuploader/",
+    contracts_build_directory:"./src/contracts/",
     //contracts_build_directory:"./client/src/contracts/",
      development: {
       host: "127.0.0.1",     // Localhost (default: none)

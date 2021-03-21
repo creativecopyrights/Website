@@ -31,6 +31,10 @@ import FillForm from "./pages/ActionForms/FillForm/FillForm"
 import Payment from "./pages/ActionForms/Payment/Payment"
 import Certificate from "./pages/ActionForms/Certificate/Certificate"
 
+// Admin
+import Administration from "./pages/Administration/Administration"
+import AdminSettings from "./pages/Administration/settings/AdminSettings"
+
 // Placeholder
 import ImageUploader from "./components/imageuploader/ImageUploader"
 
@@ -73,6 +77,12 @@ function App() {
           </Route>
           <Route path="/verify" exact>
             <BodyForm  childrenRight={<VerifyAFiling />} />
+          </Route>
+          <Route path="/admin" exact >
+            <Administration />
+          </Route>
+          <Route path="/admin/settings" exact>
+            <AdminSettings />
           </Route>
           <Redirect to="/" />
         </Switch>

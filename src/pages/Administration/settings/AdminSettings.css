@@ -1,0 +1,43 @@
+.settingsContainer{
+    padding: 1%;
+    margin: 12vh auto 15vh auto;
+    background-color: white;
+    width: 50%;
+   
+    border-radius: 15px;
+}
+
+.settingsContainer__header{
+    color: #4fa7d6;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.settingsContainer__header--form{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.settingsContainer__section{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 15px;
+    width: 21%;
+}
+
+.settingsContainer__section input{
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+
+}
+.settingsContainer__button{
+    padding: 15px;
+    background-color: #37A7D0;
+    border-color: transparent;
+    color:white;
+    font-size: 18px;
+    margin-top: 15%;
+}
