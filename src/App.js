@@ -45,7 +45,7 @@ function App() {
 
         <Switch>
           <Route path="/"  exact >
-            <BodyForm childrenLeft={<ActionForm children={<ImageUploader />} />} childrenRight={<WelcomeText />} />
+            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />} childrenRight={<WelcomeText />} />
           </Route>
           <Route path="/payment"  exact >
             <BodyForm childrenLeft={<ActionForm children={<Payment />} />} childrenRight={<WelcomeText />}/>
