@@ -31,7 +31,8 @@ import FillForm from "./pages/ActionForms/FillForm/FillForm"
 import Payment from "./pages/ActionForms/Payment/Payment"
 import Certificate from "./pages/ActionForms/Certificate/Certificate"
 
-
+// Placeholder
+import ImageUploader from "./components/imageuploader/ImageUploader"
 
 function App() {
   return (
@@ -44,7 +45,7 @@ function App() {
 
         <Switch>
           <Route path="/"  exact >
-            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />} childrenRight={<WelcomeText />} />
+            <BodyForm childrenLeft={<ActionForm children={<ImageUploader />} />} childrenRight={<WelcomeText />} />
           </Route>
           <Route path="/payment"  exact >
             <BodyForm childrenLeft={<ActionForm children={<Payment />} />} childrenRight={<WelcomeText />}/>

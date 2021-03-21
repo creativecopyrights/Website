@@ -1,22 +1,28 @@
 // React
-import {useState} from "react"
+import {useState,useRef,useEffect} from "react"
+import {Link,Redirect,Route,useHistory } from "react-router-dom"
 
 // Paypal
-import {PayPalScriptProvider,PayPalButtons, PayPalMessages } from "@paypal/react-paypal-js";
+//import {PayPalScriptProvider,PayPalButtons, PayPalMessages } from "@paypal/react-paypal-js";
+
+import {PayPalButton} from "react-paypal-button-v2"
 
 
 
 // CSS
 import "./Payment.css"
 
-const clientID = "AfFgcvEojFMqHfzGQQGyLAmsf3KaTSvTlXWKgV5GDg2q4dZZpBiH0hYhKHdybTMlU_WA69iwSZaRQXp7"
-const sandboxAccount = "sb-cqnlt5320031@business.example.com"
-const secret = "EOX4VjKj_DsLt-cbtByQsJUXFmBSBOImXFjG-Pb9ify1FOUvRPoQ6XA8uHrUbYo8iH0oDYsiRRcEWBhs"
+const clientID = "AdP-sbkzdRSRri0y42qfrqZpZ4_1HQJvDj4prJX0zuP57GCMgKPLhnLtIqZsAiq00LziPC7h06a9nwln"
+
 
 
 const Payment = () => {
 
+    // FIRE IO
+    const [paidFor,setPaidFor] = useState(false)
+    const [loaded,setLoaded] = useState(false)
 
+    const history = useHistory();
 
     const onAmountChange = (e) => {
         setAmount(e.target.value)
@@ -25,48 +31,50 @@ const Payment = () => {
     const [amount, setAmount] = useState(2);
     const [orderID, setOrderID] = useState(false);
 
-    function onChange({ target: { value } }) {
-        setAmount(value);
-        setOrderID(false);
+
+
+    const buyCredentials = {
+        clientID : clientID,
+        amount: amount,
+        currency: "EUR"
     }
 
-    function createOrder(data, actions) {
-        return actions.order
-            .create({
-                purchase_units: [
-                    {
-                        amount: {
-                            value: amount,
-                        },
-                    },
-                ],
+    function OnSuccess (details, data){
+      //  alert("Transaction complete by " + details.payer.name.given_name)
+
+      console.log(data)
+        history.push("/certificate")
+
+        /*return fetch("/paypal-transaction-complete", {
+            method: "post",
+            body: JSON.stringify({
+              orderID: data.orderID
             })
-            .then((orderID) => {
-                setOrderID(orderID);
-                return orderID;
-            });
+        })*/
+
     }
 
+    const ButtonStyle = {
+        layout: "horizontal",
+        color: "blue",
+        label: "pay",
+        tagline: false
 
-    const initialOptions = {
-        "client-id": "sb",
-        currency: "EUR",
-        intent: "capture",
-        "data-client-token": "",
-        debug: true,
-        "disable-funding": ["card","giropay","sepa","sofort"],
-        "enable-funding":["credit"]
-    
     }
+
 
     return(
-        <PayPalScriptProvider options={initialOptions} >
+
         <div className="paymentContainer" >
+
             <form className="payment__amount" >
+
+
+
 
                 <div style={{display:"flex",alignItems:"center",justifyContent:"center"}} >
                 <h2 style={{fontSize:"32px"}}>€</h2>
-                <input className="amountInput" type="number" name="amountInput" id="amountInput" value={amount} onChange={onAmountChange} />
+                <div style={{fontSize:"28px",margin:"0px 25px"}} >{amount}</div>
                 </div>
                 
            
@@ -74,14 +82,19 @@ const Payment = () => {
                 <input  style={{position:"relative",top:"32px"}}  className="payment__amount--input"  type="text" name="promoCode" id="promoCode" placeholder="ENTER PROMO CODE" />
                 <div className="paypalContainer">
 
-                <PayPalButtons createOrder={createOrder}  forceReRender={amount} />
-             
+                <PayPalButton 
+                    amount={buyCredentials.amount} 
+                    onSuccess={OnSuccess} 
+                    options={{clientId:buyCredentials.clientID , currency:buyCredentials.currency}}
+                    style={ButtonStyle}
+                 />
+          
                 </div>
                 
 
             </form>
         </div>
-        </PayPalScriptProvider>
+
     )
 }
 
