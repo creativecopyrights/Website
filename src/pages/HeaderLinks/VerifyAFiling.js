@@ -1,20 +1,17 @@
 
-
+import "./VerifyAFiling.css"
 
 const VerifyAFiling = () => {
     return(
-        <div className="welcomeTextContainer" >
-        <div>VERIFY A FILING</div>
+        <div className="verifyContainer" >
+        <div className="verifyContainer--header" >VERIFY A CERTIFICATE</div>
         <br/>
-        <p>We provide a timestamp for your file and save it safely on a blockchain</p>
-        <p> Lorem ipsum is a placeholder text used to fill unfilled spaces until proper text is found.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Phasellus id semper enim. 
-            Morbi nec felis vitae enim molestie sagittis id eu sem. 
-            Nulla nibh quam, commodo ac arcu a, dictum rutrum nunc. 
-            Etiam eget libero semper, feugiat sem quis, interdum libero. 
-            By the way if you were wondering that piece of text doesn't mean anything.
-        </p>
+        <p className="verifyContainer--text">You can verify a filing by providing the transaction code, the digital file or the certificate ID.</p>
+        <p className="verifyContainer--text" >The verification will provide date, time, name of the owner, transaction ID and public key.</p>
+        <form className="verifyContainer--form" >
+            <input type="text" name="code" id="code"className="verifyContainer--input" placeholder="XXX-XXX"  />
+            <input type="submit" value="VERIFY" className="verifyContainer--button" />
+        </form>
     </div>
     )
 }

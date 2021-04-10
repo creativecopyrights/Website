@@ -17,7 +17,7 @@ const Header = () => {
             <div className="navBar__container" >
                 <ul>
                     <li>
-                        <Link to="/" className="link"> <img src={HomeImage} alt="HOME" style={{height:26}} /> </Link>
+                        <Link to="/" className="link"> <img src={HomeImage} alt="HOME" style={{height:26,position:"relative",bottom:"3px"}} /> </Link>
                     </li>
                     <li>
                         <Link to="/pricing" className="link">PRICING</Link>
