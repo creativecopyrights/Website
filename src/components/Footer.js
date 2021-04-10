@@ -1,5 +1,7 @@
 import {Link,useLocation} from "react-router-dom"
 
+import PressKit from "../download/presskit/PressKit.zip"
+
 import "./Footer.css"
 
 
@@ -15,6 +17,9 @@ const Footer = () => {
 
 <div className="footer__container" >
                 <ul >
+                    <li>
+                        <a className="footerLink__pressKit" href={PressKit} >PRESS KIT</a>
+                    </li>
                     <li>
                         <Link className="footerLink" to="/impressum" >IMPRESSUM</Link>
                     </li>

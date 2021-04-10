@@ -23,13 +23,17 @@
     justify-content: center;
     color: white;
     font-weight: 300;
-    line-height: 1.5;
+    
     width: 80%;
 }
 
 .welcomeTextContainer div{
     letter-spacing: 3px;
     font-size: 55px;
+}
+
+.welcomeTextContainer p {
+    line-height: 0;
 }
 
 .welcomeTextContainer__buttonGroup{
@@ -39,6 +43,14 @@
     top: 15px;
     left: 10%;
     width: 80%;
+}
+
+.welcomeTextContainer__buttonGroup a{
+    color: white;
+    text-decoration: none;
+    border-width: 1px;
+    padding: 5px 20px;
+    border-style: solid;
 }
 
 .welcomeTextContainer__buttonGroup button{

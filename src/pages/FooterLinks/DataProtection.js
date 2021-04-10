@@ -1,22 +1,61 @@
-
-
+import ReactDOM from "react-dom"
+import {Link} from "react-router-dom"
+import {useState} from "react"
+import "./DataProtection.css"
 
 
 const DataProtection = () => {
+    return ReactDOM.createPortal(<DataProtectionContent />,document.getElementById("info"))
+}
+
+const DataProtectionContent = () => {
+
+    let testDate = new Date(1995, 11, 17)
+
+    const terms =  {title:"TERMS & CONDITION",lastChange: Date.now() ,text:"Mein Text"}
+    const privacy =  {title:"PRIVACY",lastChange:"last update",text:"Mein Text"}
+
+
+    const [text,setText] = useState(terms)
+
+    const ChangeText = (e) => {
+  
+        switch(e.target.getAttribute("itemid")){
+            case "terms":
+                setText(terms)
+                break
+            case "privacy":
+                setText(privacy)
+                break
+            case "impressum":
+                window.location = "/impressum"
+                break
+        }
+
+
+    }
+
     return(
-        <div className="welcomeTextContainer" >
-        <div>DATA PROTECTION</div>
-        <br/>
-        <p>We provide a timestamp for your file and save it safely on a blockchain</p>
-        <p> Lorem ipsum is a placeholder text used to fill unfilled spaces until proper text is found.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Phasellus id semper enim. 
-            Morbi nec felis vitae enim molestie sagittis id eu sem. 
-            Nulla nibh quam, commodo ac arcu a, dictum rutrum nunc. 
-            Etiam eget libero semper, feugiat sem quis, interdum libero. 
-            By the way if you were wondering that piece of text doesn't mean anything.
-        </p>
-    </div>
+        <div className="dataProtection__Container" >
+            <div className="dataProtection__Container--navbar" >
+                <ul>
+                    <li itemID="terms" onClick={ChangeText} >
+                        TERMS AND CONDITIONS
+                    </li>
+                    <li itemID="privacy" onClick={ChangeText}  >
+                        PRIVACY POLICY
+                    </li>
+                    <li itemID="impressum"  onClick={ChangeText}  >
+                        IMPRESSUM
+                    </li>
+                </ul>
+            </div>
+            <div className="dataProtection__Container--info" >
+                    <h1>{text.title}</h1>
+                    <p>{text.lastChange}</p>
+                    <p>{text.text}</p>
+            </div>
+        </div>
     )
 }
 

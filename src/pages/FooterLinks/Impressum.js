@@ -5,18 +5,21 @@ import "./Impressum.css"
 
 const Impressum = () => {
     return(
-        <div className="welcomeTextContainer" >
-        <div>IMPRESSUM</div>
+        <div className="impressum__Container" >
+        <div style={{fontSize:32, fontWeight:"bold"}} >IMPRESSUM</div>
         <br/>
-        <p>We provide a timestamp for your file and save it safely on a blockchain</p>
-        <p> Lorem ipsum is a placeholder text used to fill unfilled spaces until proper text is found.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Phasellus id semper enim. 
-            Morbi nec felis vitae enim molestie sagittis id eu sem. 
-            Nulla nibh quam, commodo ac arcu a, dictum rutrum nunc. 
-            Etiam eget libero semper, feugiat sem quis, interdum libero. 
-            By the way if you were wondering that piece of text doesn't mean anything.
-        </p>
+        <div>CREATIVE COPYRIGHTS UG (Haftungsbeschränkt)</div>
+        <br/>
+        <div>HRB 259727</div>
+        <br/>
+        <div>USt-IdNr.</div>
+        <div>DE335810805</div>
+        <br/>
+        <div>Managing Director:   Karolina Dabrowski</div>
+        <br/>
+        <div>Reifenstuelstrasse 7</div>
+        <div>80469 Munich</div>
+        <div>Germany</div>
     </div>
     )
 }

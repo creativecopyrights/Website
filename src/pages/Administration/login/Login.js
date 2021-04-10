@@ -42,8 +42,13 @@ const Login = ({setToken}) => {
 
     const recoverPassword = () => {
 
-        axios.get(backendAction+"recover").then(()=>{
-            setMessage("Passwort wurde an die Email gesendet")
+        axios.get(backendAction+"recover").then((res)=>{
+            
+
+            if (res.status === 200){
+                setMessage("Passwort wurde versandt")
+            }
+
         })
 
         

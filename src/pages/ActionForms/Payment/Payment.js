@@ -52,8 +52,6 @@ const Payment = () => {
 
     function OnSuccess (details, data){
       //  alert("Transaction complete by " + details.payer.name.given_name)
-
-      console.log(data)
         history.push("/certificate")
 
         /*return fetch("/paypal-transaction-complete", {

@@ -1,0 +1,31 @@
+.dataProtection__Container{
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    display: flex;
+}
+
+.dataProtection__Container--navbar{
+    width: 20vw;
+}
+
+.dataProtection__Container--navbar ul{
+    position: relative;
+    left: 20%;
+    top: 25%;
+    font-size: 18px;
+    list-style: none;
+}
+
+.dataProtection__Container--navbar ul li{
+    margin: 10px 0px;
+    color: rgb(44, 44, 233);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.dataProtection__Container--info{
+    margin-top: 50px;
+}

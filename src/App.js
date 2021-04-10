@@ -1,7 +1,5 @@
-import {BrowserRouter as Router, Switch, Route,Redirect} from "react-router-dom"
+import {BrowserRouter as Router, Switch, Route,Redirect, Link} from "react-router-dom"
 import './App.css';
-
-
 
 // Pages
 import BodyForm from "./pages/BodyForm/BodyForm"
@@ -16,7 +14,6 @@ import Pricing from "./pages/HeaderLinks/Pricing"
 import UseCases from "./pages/HeaderLinks/UseCases"
 import HowItWorks from "./pages/HeaderLinks/HowItWorks"
 import VerifyAFiling from "./pages/HeaderLinks/VerifyAFiling"
-
 
 // Components
 import Header from "./components/Header"
@@ -46,7 +43,6 @@ function App() {
         {/* Header */}
         <Header />
         
-
         <Switch>
           <Route path="/"  exact >
             <BodyForm childrenLeft={<ActionForm children={<FillForm />} />} childrenRight={<WelcomeText />} />
@@ -100,21 +96,16 @@ export default App;
 const WelcomeText = () => {
   return(
       <div className="welcomeTextContainer" >
-          <div>YOUR IDEAS ARE YOUR POWER.</div>
+          <div><span style={{fontWeight:"bolder"}} >YOUR IDEAS </span>ARE <span style={{fontWeight:"bolder"}} >YOURS</span>.</div>
           <div>PROTECT THEM.</div>
           <br/>
-          <p>We provide a timestamp for your file and save it safely on a blockchain</p>
-          <p> Lorem ipsum is a placeholder text used to fill unfilled spaces until proper text is found.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-              Phasellus id semper enim. 
-              Morbi nec felis vitae enim molestie sagittis id eu sem. 
-              Nulla nibh quam, commodo ac arcu a, dictum rutrum nunc. 
-              Etiam eget libero semper, feugiat sem quis, interdum libero. 
-              By the way if you were wondering that piece of text doesn't mean anything.
-          </p>
+          <p>It was never so easy to steal ideas off the web</p>
+          <p>It was never so easy to protect your ideas through the web.</p>
+          <p>Protect your copyright and start profiting from your ideas</p>
+          <h2>No Subscription - No Registration - Just Pay As You Go</h2>
           <div className="welcomeTextContainer__buttonGroup" >
-              <button style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} >HOW IT WORKS</button>
-              <button style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} >GET STARTED</button>
+              <Link style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} to="/how" >HOW IT WORKS</Link>
+              <Link style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} to="/how" >GET STARTED</Link>
           </div>
       </div>
   )

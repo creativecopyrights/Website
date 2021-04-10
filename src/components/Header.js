@@ -1,5 +1,6 @@
 import "./Header.css"
 import {Link,useLocation} from "react-router-dom"
+import HomeImage from "../images/Home.png"
 
 
 
@@ -16,7 +17,7 @@ const Header = () => {
             <div className="navBar__container" >
                 <ul>
                     <li>
-                        <Link to="/" className="link">HOME</Link>
+                        <Link to="/" className="link"> <img src={HomeImage} alt="HOME" style={{height:26}} /> </Link>
                     </li>
                     <li>
                         <Link to="/pricing" className="link">PRICING</Link>
