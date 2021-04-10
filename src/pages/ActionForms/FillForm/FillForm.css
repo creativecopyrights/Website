@@ -80,6 +80,7 @@
     padding: 10px;
     font-size: 20px;
     font-weight: bolder;
+    outline: none;
 }
 
 .fillFormContainer_form--buttonGrey{
@@ -112,6 +113,7 @@
     position: relative;
     z-index: 2;
     cursor: pointer;
+    outline: none;
 }
 
 .verify--code{

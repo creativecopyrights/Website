@@ -54,7 +54,7 @@ function App() {
             <BodyForm childrenLeft={<ActionForm children={<Certificate />} />} childrenRight={<WelcomeText />}/>
           </Route>
           <Route path="/impressum" exact>
-            <BodyForm  childrenRight={<Impressum />} />
+            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />}  childrenRight={<Impressum />} />
           </Route>
           <Route path="/termsandconditions" exact>
             <BodyForm  childrenRight={<DataProtection privacy={false}  />} />
@@ -63,16 +63,16 @@ function App() {
             <BodyForm  childrenRight={<DataProtection privacy={true} />} />
           </Route>
           <Route path="/pricing" exact>
-            <BodyForm  childrenRight={<Pricing />} />
+            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />}  childrenRight={<Pricing />} />
           </Route>
           <Route path="/usecases" exact>
-            <BodyForm  childrenRight={<UseCases />} />
+            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />}  childrenRight={<UseCases />} />
           </Route>
           <Route path="/how" exact>
-            <BodyForm  childrenRight={<HowItWorks />} />
+            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />}  childrenRight={<HowItWorks />} />
           </Route>
           <Route path="/verify" exact>
-            <BodyForm  childrenRight={<VerifyAFiling />} />
+            <BodyForm childrenLeft={<ActionForm children={<FillForm />} />} childrenRight={<VerifyAFiling />} />
           </Route>
           <Route path="/admin" exact >
             <Administration />

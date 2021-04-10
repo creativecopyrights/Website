@@ -1,0 +1,46 @@
+.useCaseContainer{
+    width: 80%;
+    color: white;
+}
+
+
+.useCaseItem--header{
+    font-size: 28px;
+    
+}
+
+
+.useCaseItem{
+    margin: 25px 0px;
+    cursor: pointer;
+    
+}
+
+.useCaseItem--button::after{
+    content: ">";
+    margin-left: 35px;
+    transform: rotate(0deg);
+    transition: .4s;
+}
+
+.useCaseItem--button:focus{
+    outline: none;
+}
+
+.useCaseItem--text{
+    transition: 5s;
+    
+}
+
+.useCaseItem--text p{
+    transition: 5s;
+
+}
+
+
+.open::after{
+    display: inline-block;
+    transform: rotate(90deg);
+
+}
+

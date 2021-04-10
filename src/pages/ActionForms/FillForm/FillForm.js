@@ -11,6 +11,8 @@ import "./FillForm.css"
 import {useDropzone} from 'react-dropzone';
 import { Link, Redirect } from "react-router-dom";
 
+// Axios
+import axios from "axios"
 
 
 const FillForm = () => {
@@ -51,21 +53,31 @@ const FillForm = () => {
 
             if (e.target.files.length > 0 ){
                 reader.readAsDataURL(e.target.files[0])
-            }
-          
-        
-     
-      
-        
-        
+            } 
     }
+
+    const sendVerifyMail = (e) => {
+
+        e.preventDefault()
+
+        axios.post("http://localhost:5000/verify",{
+            params:{
+                name: name,
+                email: email
+            }
+        })
+        .then((res)=> {console.log(res)})
+
+    }
+
+
 
     return(
         <div className="fillFormContainer" >
 
            
             <div className="fillFormContainer__dropzone" >
-            <form className="fillFormContainer_form" >
+            <form className="fillFormContainer_form"  onSubmit={sendVerifyMail}  >
             <div className="dropzone"  >            
                 <input type="file"  className="filepicker" onChange={CreateHashFromFile} />
                 <div className="inputOverlay" >
@@ -86,7 +98,18 @@ const FillForm = () => {
 
                 <input onChange={ChangeName} value={name} className="fillFormContainer_form--input" type="text" name="name" id="name" placeholder="YOUR NAME *" />
                 <input onChange={ChangeEmail} value={email}  className="fillFormContainer_form--input"  type="email" name="email" id="email" placeholder="YOUR EMAIL ADRESS *" />
-                <Veryfier />
+                
+
+                <div style={{margin:"25px auto"}} >
+             
+               
+                    <input type="submit" value="VERIFY" className="verify--button" />
+                    <input type="type" className="verify--code"  name="verifyCode" id="verifyCode" placeholder="ENTER CODE*" />
+                
+                <div style={{fontSize:"12px",margin:"10px 0px 10px 25px",textDecoration:"underline",cursor:"pointer"}} onClick={sendVerifyMail} >no email? send again.</div>
+            
+                </div>
+
                 {files.length !== 0 && name !== "" && email !== "" ?
 
                                 <div className="fillFormContainer_form--button" >
@@ -105,19 +128,7 @@ const FillForm = () => {
     )
 }
 
-const Veryfier = () => {
-    return(
-        <div style={{margin:"25px auto"}} >
-         
-                <form action="http://localhost:5000/verify" method="post">
-                    <input type="button" value="VERIFY" className="verify--button" />
-                    <input type="text" className="verify--code"  name="verifyCode" id="verifyCode" placeholder="ENTER CODE*" />
-                </form>
-                <div style={{fontSize:"12px",margin:"10px 0px 10px 25px",textDecoration:"underline",cursor:"pointer"}} >no email? send again.</div>
-           
-        </div>
-    )
-}
+
 
 
 export default FillForm
