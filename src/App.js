@@ -57,10 +57,10 @@ function App() {
             <BodyForm  childrenRight={<Impressum />} />
           </Route>
           <Route path="/termsandconditions" exact>
-            <BodyForm  childrenRight={<TermsAndConditions />} />
+            <BodyForm  childrenRight={<DataProtection privacy={false}  />} />
           </Route>
           <Route path="/dataprotection" exact>
-            <BodyForm  childrenRight={<DataProtection />} />
+            <BodyForm  childrenRight={<DataProtection privacy={true} />} />
           </Route>
           <Route path="/pricing" exact>
             <BodyForm  childrenRight={<Pricing />} />

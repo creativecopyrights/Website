@@ -1,14 +1,14 @@
 import ReactDOM from "react-dom"
 import {Link} from "react-router-dom"
-import {useState} from "react"
+import {useState,useEffect} from "react"
 import "./DataProtection.css"
 
 
-const DataProtection = () => {
-    return ReactDOM.createPortal(<DataProtectionContent />,document.getElementById("info"))
+const DataProtection = (props) => {
+    return ReactDOM.createPortal(<DataProtectionContent privacy={props.privacy} />,document.getElementById("info"))
 }
 
-const DataProtectionContent = () => {
+const DataProtectionContent = (props) => {
 
     let testDate = new Date(1995, 11, 17)
 
@@ -17,6 +17,16 @@ const DataProtectionContent = () => {
 
 
     const [text,setText] = useState(terms)
+
+    useEffect(()=>{
+
+        if (props.privacy){
+            setText(privacy)
+        }
+
+    },[])
+
+ 
 
     const ChangeText = (e) => {
   

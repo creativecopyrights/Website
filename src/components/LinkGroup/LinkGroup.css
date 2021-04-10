@@ -1,9 +1,6 @@
 .linkGroup{
-    position: relative;
-    right: 2%;
-    top: -5%;
     height: 32px;
-    width: 104%;
+    width: 100%;
 }
 
 .hLine{
@@ -11,18 +8,23 @@
     justify-content: space-around;
 }
 
+.hLine .first{
+    border-top-left-radius: 15px;
+}
+
+.hLine .last{
+    border-top-right-radius: 15px;
+}
+
 .linkTag{
     font-family: 'Architects Daughter', cursive;
     background-color: rgba(255, 255, 255, .5);
-    width: 32%;
+    width: 100%;
     text-align: center;
     height: 32px;
     position: relative;
     font-size: 1.5rem;
     top: -5px;
-    
-   
-    border-radius: 5px;
     text-decoration: none;
-    color: #59a7df;
+    color: #2a81be;
 }

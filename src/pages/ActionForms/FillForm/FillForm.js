@@ -86,15 +86,15 @@ const FillForm = () => {
 
                 <input onChange={ChangeName} value={name} className="fillFormContainer_form--input" type="text" name="name" id="name" placeholder="YOUR NAME *" />
                 <input onChange={ChangeEmail} value={email}  className="fillFormContainer_form--input"  type="email" name="email" id="email" placeholder="YOUR EMAIL ADRESS *" />
-                <textarea className="fillFormContainer_form--textarea" name="textarea" id="" rows="6" placeholder="OPTIONAL NOTES                                   DESCRIBE YOUR WORK OR WRITE NOTES                      FOR YOUR MENVINIENCE THIS WILL BE SHOWN ON            THE FINAL CERTIFICATE" ></textarea>
+                <Veryfier />
                 {files.length !== 0 && name !== "" && email !== "" ?
 
                                 <div className="fillFormContainer_form--button" >
-                                    <Link style={{fontFamily:"Architects Daughter,cursive" ,width:"100%",height:"100%",textAlign:"center"}} to="/payment" className="link">proceed to checkout</Link>
+                                    <Link style={{width:"100%",height:"100%",textAlign:"center"}} to="/payment" className="link">CHECKOUT</Link>
                                 </div>
                                 :
                                 <div className="fillFormContainer_form--buttonGrey" >
-                                <div style={{fontFamily:"Architects Daughter,cursive" , width:"100%",height:"100%",textAlign:"center",color:"white",fontWeight:"100"}}>paste a file to proceed</div>
+                                <div style={{width:"100%",height:"100%",textAlign:"center",color:"white",fontWeight:"100"}}>CHECKOUT</div>
                                 </div>
                 }
 
@@ -105,6 +105,19 @@ const FillForm = () => {
     )
 }
 
+const Veryfier = () => {
+    return(
+        <div style={{margin:"25px auto"}} >
+         
+                <form action="http://localhost:5000/verify" method="post">
+                    <input type="button" value="VERIFY" className="verify--button" />
+                    <input type="text" className="verify--code"  name="verifyCode" id="verifyCode" placeholder="ENTER CODE*" />
+                </form>
+                <div style={{fontSize:"12px",margin:"10px 0px 10px 25px",textDecoration:"underline",cursor:"pointer"}} >no email? send again.</div>
+           
+        </div>
+    )
+}
 
 
 export default FillForm

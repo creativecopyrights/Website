@@ -10,14 +10,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  
-    
+    background-color: #AEE0F9;
+    margin-bottom: 25px;
 }
 
 .dropzone input{
     height: 130px;
     width: 100%;
-
+    
 }
 
 .filepicker{
@@ -31,7 +31,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+   
     pointer-events: none
 }
 
@@ -42,7 +42,7 @@
 }
 
 .dropzone:hover{
-    background-color: rgb(202, 202, 202);
+    background-color: #8bb3c7;
 }
 
 .fillFormContainer_form{
@@ -54,11 +54,12 @@
 .fillFormContainer_form--input{
     height: 32px;
     margin: 5px 5px;
-    background-color: rgb(255, 235, 232);
+    background-color: #AEE0F9;
     border-width: 1px;
-    border-color: rgb(255, 209, 202);
+    border-color: #72afce;
     border-style: solid;
     padding: 0px 25px 0px 25px;
+    
 }
 
 
@@ -69,27 +70,28 @@
 }
 
 .fillFormContainer_form--button{
-    height: 20px;
+    width: 40%;
     letter-spacing: 1.5px;
-    background-color: #4D87B5;
-    border-style: solid;
-    border-color: transparent;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    background: rgb(45,129,201);
+    background: linear-gradient(90deg, rgba(45,129,201,1) 0%, rgba(17,215,216,1) 100%);
+    border-style: none;
+    border-radius: 25px;
+    margin: 0px auto;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 .fillFormContainer_form--buttonGrey{
-    height: 20px;
+    width: 40%;
     letter-spacing: 1.5px;
     background-color: #7e909e;
-    border-style: solid;
-    border-color: transparent;
-    border-radius: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    border-style: none;
+    border-radius: 25px;
+    margin: 0px auto;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bolder;
 }
 
 
@@ -97,3 +99,27 @@
     padding: 15px;
 }
 
+.verify--button{
+    width: 170px;
+    font-size: 20px;
+    padding:10px;
+    border-radius: 25px;
+    border-style: none;
+    color: white;
+    letter-spacing: 2px;
+    background: rgb(45,129,201);
+    background: linear-gradient(90deg, rgba(45,129,201,1) 0%, rgba(17,215,216,1) 100%);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.verify--code{
+    position: relative;
+    right: 10px;
+    z-index: 1;
+    border-color: white;
+    border-style: solid;
+    padding: 5px 0px 5px 25px;
+
+}
