@@ -19,4 +19,7 @@
     border-bottom-right-radius: 15px;
     display: flex;
     margin: 0px auto 0px auto;
+    box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58),-10px 0px 29px 0px rgba(255,255,255,0.58);
+    -webkit-box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58),-10px 0px 29px 0px rgba(255,255,255,0.58);
+    -moz-box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58),-10px 0px 29px 0px rgba(255,255,255,0.58);
 }
