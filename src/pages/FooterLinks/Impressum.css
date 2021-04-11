@@ -3,3 +3,14 @@
     font-size: 17px;
     font-weight: lighter;
 }
+
+
+
+@media (max-width: 650px){
+
+    .impressum__Container{
+        width: 80%;
+        margin: auto;
+    }
+
+}

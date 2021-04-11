@@ -6,7 +6,6 @@
 
 .useCaseItem--header{
     font-size: 32px;
-    
 }
 
 
@@ -41,6 +40,24 @@
 .open::after{
     display: inline-block;
     transform: rotate(90deg);
+
+}
+
+
+@media (max-width: 650px){
+
+    .useCaseContainer{
+        width: 80%;
+        margin: auto;
+    }
+
+    .useCaseItem--header{
+        font-size: 20px;
+    }
+
+    .useCaseItem--button::after{
+        margin-left: 15px;
+    }
 
 }
 

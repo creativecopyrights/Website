@@ -9,9 +9,9 @@ const HowItWorks = () => {
                     {
                 HowItWorksSection.map(s => {
                     return(
-                        <li style={{listStyle:"none", margin: "30px 0px", }} >  
-                            <div style={{fontWeight:"bolder", fontSize:26, color:"white"}} >{s.number}) {s.title}</div>
-                            <div style={{fontWeight:"lighter",fontSize:18, color:"white", width:"55%"}} >{s.text}</div>
+                        <li key={s.number+s.text} >  
+                            <div className="howItWorksContainer--upper" >{s.number}) {s.title}</div>
+                            <div className="howItWorksContainer--inner" >{s.text}</div>
                         </li>
                     )
                 })

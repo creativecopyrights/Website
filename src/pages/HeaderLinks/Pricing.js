@@ -34,13 +34,13 @@ const Card = (props) => {
                 <div className="cardContainer--title"  >PAY AS YOU GO</div>
                 <div className="cardContainer--body"  >€{cost}</div>
                 <div style={{display:"flex",flexDirection:"column",height:"50%",justifyContent:"flex-end"}} >
-                    <div style={{display:"flex",justifyContent:"flex-start",width:"60%",alignItems:"center",margin:"5px auto",fontSize:"14px"}} >
+                    <div style={{display:"flex",justifyContent:"flex-start",width:"60%",alignItems:"center",margin:"5px auto",fontSize:"13px"}} >
                         <img src={Checkbox} alt="Checkbox"/>
-                        <div>One File Protection</div>
+                        <div style={{position:"relative",left:"15px"}} >One File Protection</div>
                     </div>
-                    <div style={{display:"flex",justifyContent:"flex-start",width:"60%",alignItems:"center",margin:"5px auto",fontSize:"14px"}} >
+                    <div style={{display:"flex",justifyContent:"flex-start",width:"60%",alignItems:"center",margin:"5px auto",fontSize:"13px"}} >
                         <img src={Checkbox} alt="Checkbox"/>
-                        <div>One File</div>
+                        <div style={{position:"relative",left:"15px"}} >One File</div>
                     </div>
                     <button className="card--button" >GET STARTED</button>
                 </div>
@@ -54,17 +54,17 @@ const Card = (props) => {
                 <div className="cardContainer--title"  >PACKAGES</div>
                 <div style={{width:"80%",margin:"25px auto 0px auto "}} >For package solution or individual solutions eg for businesses please contact us.</div>
                 <div style={{display:"flex",flexDirection:"column",height:"57%",justifyContent:"flex-end"}} >
-                    <div style={{display:"flex",justifyContent:"flex-start",width:"75%",alignItems:"center",margin:"5px auto",fontSize:"14px"}} >
+                    <div style={{display:"flex",justifyContent:"flex-start",width:"75%",alignItems:"center",margin:"5px auto",fontSize:"13px"}} >
                         <img src={Checkbox} alt="Checkbox"/>
-                        <div>Multiple Files Protexction</div>
+                        <div style={{position:"relative",left:"15px"}} >Multiple Files Protexction</div>
                     </div>
-                    <div style={{display:"flex",justifyContent:"flex-start",width:"75%",alignItems:"center",margin:"5px auto",fontSize:"14px"}} >
+                    <div style={{display:"flex",justifyContent:"flex-start",width:"75%",alignItems:"center",margin:"5px auto",fontSize:"13px"}} >
                         <img src={Checkbox} alt="Checkbox"/>
-                        <div>Individual Certificates per Filling</div>
+                        <div style={{position:"relative",left:"15px"}} >Individual Certificates per Filling</div>
                     </div>
-                    <div style={{display:"flex",justifyContent:"flex-start",width:"75%",alignItems:"center",margin:"5px auto",fontSize:"14px"}} >
+                    <div style={{display:"flex",justifyContent:"flex-start",width:"75%",alignItems:"center",margin:"5px auto",fontSize:"13px"}} >
                         <img src={Checkbox} alt="Checkbox"/>
-                        <div>No Timing Contraints</div>
+                        <div style={{position:"relative",left:"15px"}} >No Timing Contraints</div>
                     </div>
                     <button className="card--button" >CONTACT US</button>
                 </div>

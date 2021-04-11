@@ -52,3 +52,35 @@
     font-family: Architects Daughter;
     
 }
+
+@media (max-width: 650px){
+
+    .pricingContainer{
+        padding: 15px;
+    }
+
+    .cardContainer{
+        width: 80%;
+        height: 400px;
+        margin: 15px;
+        border-radius: 10px;
+        background: rgb(47,147,207);
+        background: linear-gradient(130deg, rgba(47,147,207,1) 0%, rgba(95,215,217,1) 100%);
+    }
+
+    .cardContainer--title{
+        font-size: 26px;
+    }
+
+    .cardContainer--body{
+        font-size: 45px;
+    }
+
+    .pricingContainer__cardSection{
+        margin-top: 50px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
