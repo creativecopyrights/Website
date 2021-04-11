@@ -63,7 +63,7 @@
     border-width: 1px;
 }
 
-@media (max-width: 450px){
+@media (max-width: 650px){
 
     .bodyFormContainer{
         flex-direction: column-reverse;
