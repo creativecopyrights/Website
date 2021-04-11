@@ -130,11 +130,11 @@
 @media (max-width: 650px){
 
     .verify--button{
-        width: 150px;
+        width: 130px;
     }
 
     .verify--code{
-        width: 120px;
+        width: 110px;
     }
 
 }
