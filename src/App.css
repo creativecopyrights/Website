@@ -25,16 +25,19 @@
 .WelcomeTextContainer__buttonGroup{
     display: flex;
     justify-content: space-between;
-    width: 50%;
+    width: 60%;
+
+    margin-left: 200px;
 }
 
 .WelcomeTextContainer__buttonGroup--link{
     font-size:1.5rem;
     border-style: solid;
-    padding: 10px;
+    padding: 10px 30px;
     border-color: white;
     color: white;
     text-decoration: none;
+    border-width: 1px;
 }
 
 
@@ -74,6 +77,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        margin-left: 0;
     }
 
     .WelcomeTextContainer__buttonGroup--link{
