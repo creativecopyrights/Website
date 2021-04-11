@@ -98,8 +98,8 @@ export default App;
 
 const WelcomeText = () => {
   return(
-      <div className="welcomeTextContainer" >
-          <div >
+      <div className="WelcomeTextContainer" >
+          <div>
             <span style={{fontWeight:"bolder"}} >YOUR IDEAS </span>
             <span>ARE </span>
             <span style={{fontWeight:"bolder"}} >YOURS</span>
@@ -110,9 +110,9 @@ const WelcomeText = () => {
           <p>It was never so easy to protect your ideas through the web.</p>
           <p>Protect your copyright and start profiting from your ideas</p>
           <h2>No Subscription - No Registration - Just Pay As You Go</h2>
-          <div className="welcomeTextContainer__buttonGroup" >
-              <Link style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} to="/how" >HOW IT WORKS</Link>
-              <Link style={{fontFamily:"Architects Daughter, cursive",fontSize:"1.5rem"}} to="/how" >GET STARTED</Link>
+          <div className="WelcomeTextContainer__buttonGroup" >
+              <Link className="WelcomeTextContainer__buttonGroup--link"  style={{fontFamily:"Architects Daughter, cursive"}} to="/how" >HOW IT WORKS</Link>
+              <Link className="WelcomeTextContainer__buttonGroup--link"  style={{fontFamily:"Architects Daughter, cursive"}} to="/how" >GET STARTED</Link>
           </div>
       </div>
   )
