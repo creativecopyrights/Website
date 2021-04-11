@@ -35,10 +35,13 @@ import AdminSettings from "./pages/Administration/settings/AdminSettings"
 // Placeholder
 import ImageUploader from "./components/imageuploader/ImageUploader"
 
+import BG from "./images/Background.png"
+
 function App() {
   return (
 
     <div className="App">
+
       <Router>
         {/* Header */}
         <Header />
@@ -96,8 +99,12 @@ export default App;
 const WelcomeText = () => {
   return(
       <div className="welcomeTextContainer" >
-          <div><span style={{fontWeight:"bolder"}} >YOUR IDEAS </span>ARE <span style={{fontWeight:"bolder"}} >YOURS</span>.</div>
-          <div>PROTECT THEM.</div>
+          <div >
+            <span style={{fontWeight:"bolder"}} >YOUR IDEAS </span>
+            <span>ARE </span>
+            <span style={{fontWeight:"bolder"}} >YOURS</span>
+            <span>.</span></div>
+          <div  ><span>PROTECT THEM.</span></div>
           <br/>
           <p>It was never so easy to steal ideas off the web</p>
           <p>It was never so easy to protect your ideas through the web.</p>

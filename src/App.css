@@ -1,0 +1,26 @@
+@media (max-width: 450px){
+    .App{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .welcomeTextContainer{
+        margin: 0px auto;
+        font-size: 16px;
+    }
+
+    .welcomeTextContainer div span{
+        font-size: 25px;
+    }
+
+    .welcomeTextContainer p{
+        font-size: 12px;
+    }
+
+    .welcomeTextContainer h2{
+        font-size: 30px;
+        width: 88%;
+    }
+
+}
+

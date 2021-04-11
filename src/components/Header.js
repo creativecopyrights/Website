@@ -11,13 +11,13 @@ const Header = () => {
     return(
         <div className="navBar" >
 
-            <Link to="/" style={{width:"130px",position:"relative",left:"50px",top:"30px",height:"180px"}} ></Link>
+
             {location.pathname !== "/admin" && 
             
             <div className="navBar__container" >
                 <ul>
                     <li>
-                        <Link to="/" className="link"> <img src={HomeImage} alt="HOME" style={{height:26,position:"relative",bottom:"3px"}} /> </Link>
+                        <Link to="/" className="link home "> <img src={HomeImage} alt="HOME" /> </Link>
                     </li>
                     <li>
                         <Link to="/pricing" className="link">PRICING</Link>

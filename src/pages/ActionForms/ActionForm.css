@@ -23,3 +23,8 @@
     -webkit-box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58),-10px 0px 29px 0px rgba(255,255,255,0.58);
     -moz-box-shadow: 10px 10px 29px 0px rgba(0,0,0,0.58),-10px 0px 29px 0px rgba(255,255,255,0.58);
 }
+
+@media (max-width: 450px){
+
+    
+}

@@ -1,5 +1,5 @@
 .bodyFormContainer{
-    height: 80vh;
+    height: 74vh;
     display: flex;
     align-items: center;
 }
@@ -61,4 +61,23 @@
     border-color: white;
     color: white;
     border-width: 1px;
+}
+
+@media (max-width: 450px){
+
+    .bodyFormContainer{
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .bodyFormContainer__form{
+        width: 100%;
+    }
+
+    .bodyFormContainer__body{
+        padding: 0px 0px 25px 0px;
+        width: 98%;
+        margin: 0px 0px 15px 0px;
+    }
+
 }

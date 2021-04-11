@@ -36,3 +36,11 @@
     
 
 }
+
+@media (max-width: 450px){
+    
+    .linkTag{
+        font-size: 1.2rem;
+    }
+
+}
